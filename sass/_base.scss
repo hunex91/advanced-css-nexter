@@ -10,9 +10,18 @@ $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 
+$color-red: #f70707;
+
 // Fonts
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+// Breakpoints
+$bp-xlarge: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+$bp-xsmall: 31.25em;
 
 // Margins
 .mb-small {
@@ -44,6 +53,10 @@ html {
 
   // This will make 1rem = 10px (10 / 16 = 0.625)
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-xlarge) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -58,4 +71,13 @@ body {
   // Grid tracks
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [side-start] 8rem [side-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
 }

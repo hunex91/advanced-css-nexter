@@ -12,10 +12,6 @@
   grid-gap: 2rem;
   align-items: center;
   
-  &__item {
-
-  }
-
   &__link:link, &__link:visited {
     padding: 1.5rem;
     display: block;
@@ -46,4 +42,8 @@
   color: $color-grey-light-2;
   font-size: 1.4rem;
   text-align: center;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+  }
 }
