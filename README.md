@@ -1,4 +1,4 @@
-# Trillo project
+# Nexter project
 
 A sample project using CSS Grid.
 
